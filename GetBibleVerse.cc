@@ -4,6 +4,55 @@
 #include <time.h>
 #include <stdlib.h>
 
+#include "./bible.class.h"
+
+/*
+ * TODO: Create the following classes and implement the outlined functionality.
+ *
+ * 	- Verse [ ] 
+ * 	- Chapter [ ]
+ * 	- Book [ ]
+ * 	- Testament [ ]
+ * 	- Bible [ ]
+ *
+ * Verse:
+ * 	Must contain: 
+ * 		verseId, 
+ * 		verseLength, 
+ * 		verseText
+ * 	Might do:
+ * 		- Graphical stuff
+ * Chapter:
+ * 	Must contain: 
+ * 		chapterId, 
+ * 		chapterVerseCount, 
+ * 		chapterVerses.
+ * 	Might do:
+ * 		- Graphical stuff
+ * Book:
+ * 	Must contain: 
+ * 		bookId, 
+ * 		bookName, 
+ * 		bookChapterCount, 
+ * 		bookChapters
+ * 	Might do:
+ * 		- Graphical stuff
+ * Testament:
+ * 	Must contain: 
+ * 		testamentId, 
+ * 		testamentBookCount, 
+ * 		testamentBooks
+ * 	Might do:
+ * 		- Graphical stuff
+ * Bible:
+ * 	Must contain: 
+ * 		bibleTestamentCount, bibleTestaments
+ * 	Must do:
+ * 		-Fetch any arbitrary verse regardless of recursion depth.
+ *		-Internal randomization algorithms for generating verses.
+ * 
+ * */
+
 int main(){
 	srand((unsigned)time(NULL));
 	int maxChapter = 150;
@@ -28,14 +77,25 @@ int main(){
 
 	int chapter = 0;
 	int verse = 0;
-	int id = rand() % 65;
+	int bookId = rand() % 65;
 
-	switch(id){
-		case 30:
+	/* 
+	 * TODO: Ensure that the total number of chapters in the chosen book reflects the literal amount of chapters.
+	 * */
+	switch(bookId){
+		case 30: // Amos
 			maxChapter = 1;
-		case 0:
+			break;
+		case 0: // Genesis
 			maxChapter = 50;
-		default:
+			break;
+		case 3: // Malachi
+			maxChapter = 4;
+			break;
+		case 11: // 2 Kings
+			 maxChapter = 25;
+			 break;
+		default: // genesis
 			maxChapter = 150;
 			maxVerse = 150;
 	}
@@ -43,8 +103,8 @@ int main(){
 	chapter = (rand() % maxChapter)+1;
 	verse = (rand() % maxVerse)+1;
 
-	urlMain += books[id] + "-Chapter-"+std::to_string(chapter)+"/#"+std::to_string(verse);
+	urlMain += books[bookId] + "-Chapter-"+std::to_string(chapter)+"/#"+std::to_string(verse);
 
-	printf("Values for Book ID %d: C=%d V=%d\n\nUrl : %s\n", id, chapter, verse, urlMain.c_str());
+	printf("Values for Book ID %d: C=%d V=%d\n\nUrl : %s\n", bookId, chapter, verse, urlMain.c_str());
 	return 0;	
 }
