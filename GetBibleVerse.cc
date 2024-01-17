@@ -95,12 +95,22 @@ int main(){
 		case 11: // 2 Kings
 			 maxChapter = 25;
 			 break;
+		case 58: //James
+			maxChapter = 5;	
+			break;
+		case 46: // Corinthians 1
+			maxChapter = 16;
+			break;
+		case 40: // MAthew
+			 maxChapter = 28;
+			 break;
 		default: // genesis
 			maxChapter = 150;
 			maxVerse = 150;
 	}
 	
 	chapter = (rand() % maxChapter)+1;
+
 	verse = (rand() % maxVerse)+1;
 
 	urlMain += books[bookId] + "-Chapter-"+std::to_string(chapter)+"/#"+std::to_string(verse);
