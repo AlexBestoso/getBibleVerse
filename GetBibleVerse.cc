@@ -107,6 +107,9 @@ int main(){
 		case 18: // job
 			 maxChapter = 42;
 			 break;
+		case 21: //Ecclesiastes
+			 maxChapter = 12;
+			 break;
 		default: // genesis
 			maxChapter = 150;
 			maxVerse = 150;
