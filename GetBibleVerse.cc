@@ -101,15 +101,18 @@ int main(){
 		case 46: // Corinthians 1
 			maxChapter = 16;
 			break;
-		case 40: // MAthew
-			 maxChapter = 28;
-			 break;
 		case 18: // job
 			 maxChapter = 42;
 			 break;
 		case 21: //Ecclesiastes
 			 maxChapter = 12;
 			 break;
+		case 40: // Matthew
+			 maxChapter = 28;
+			 break;
+		case 25:
+			maxChapter = 5;
+			break;
 		default: // genesis
 			maxChapter = 150;
 			maxVerse = 150;
