@@ -113,6 +113,9 @@ int main(){
 		case 25:
 			maxChapter = 5;
 			break;
+		case 57: 
+			maxChapter = 13;
+			break;
 		default: // genesis
 			maxChapter = 150;
 			maxVerse = 150;
