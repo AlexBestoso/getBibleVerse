@@ -93,7 +93,7 @@ int main(){
 			maxChapter = 4;
 			break;
 		case 11: // 2 Kings
-			 maxChapter = 25;
+			 maxChapter = 22;
 			 break;
 		case 58: //James
 			maxChapter = 5;	
