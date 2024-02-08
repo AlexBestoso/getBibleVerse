@@ -116,6 +116,8 @@ int main(){
 		case 57: 
 			maxChapter = 13;
 			break;
+		case 56: // Philemon
+			maxChapter = 1;
 		default: // genesis
 			maxChapter = 150;
 			maxVerse = 150;
@@ -127,6 +129,6 @@ int main(){
 
 	urlMain += books[bookId] + "-Chapter-"+std::to_string(chapter)+"/#"+std::to_string(verse);
 
-	printf("Values for Book ID %d: C=%d V=%d\n\nUrl : %s\n", bookId, chapter, verse, urlMain.c_str());
+	printf("Values for Book ID %d:\n C=%d \nV=%d\n\nUrl : %s\n", bookId, chapter, verse, urlMain.c_str());
 	return 0;	
 }
